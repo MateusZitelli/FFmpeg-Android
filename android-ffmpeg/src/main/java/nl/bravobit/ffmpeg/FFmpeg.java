@@ -59,7 +59,8 @@ public class FFmpeg implements FFbinaryInterface {
         if (!ffmpeg.exists() || version < VERSION) {
             String prefix = "arm/";
             if (cpuArch == CpuArch.x86) {
-                prefix = "x86/";
+                Log.e("arch not supported");
+                return false;
             }
             Log.d("file does not exist, creating it...");
 
